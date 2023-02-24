@@ -6,7 +6,7 @@
 //  Copyright © 2023 Angela Yu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct CalculatorBrain {
     
@@ -28,7 +28,13 @@ struct CalculatorBrain {
         else  {
             bmi = BMI(value: bmiValue, advice: "Eat less pies!", color: UIColor.red)
         }
-        
-        
+    }
+    
+    func getAdvice() -> String {
+        return  bmi?.advice ?? " "
+    }
+    
+    func getColor() -> UIColor {
+        return bmi?.color ?? UIColor.white
     }
 }
